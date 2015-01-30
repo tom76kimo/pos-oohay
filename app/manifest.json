@@ -1,6 +1,6 @@
 {
     "name": "__MSG_appName__",
-    "version": "0.0.7",
+    "version": "0.0.19",
     "manifest_version": 2,
     "description": "__MSG_appDescription__",
     "icons": {
@@ -23,8 +23,9 @@
                 "styles/main.css"
             ],
             "js": [
-                "scripts/jquery-1.11.2.min.js",
-                "scripts/contentscript.js"
+                "bower_components/react/react.js",
+                "scripts/contentscript.js",
+                "scripts/Sop.js"
             ],
             "run_at": "document_end",
             "all_frames": false
