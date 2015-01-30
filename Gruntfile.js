@@ -291,8 +291,20 @@ module.exports = function (grunt) {
           dest: ''
         }]
       }
+    },
+
+    react: {
+      files: {
+        expand: true,
+        cwd: 'app/jsx',
+        src: ['*.jsx'],
+        dest: 'app/scripts',
+        ext: '.js'
+      }
     }
   });
+
+  grunt.loadNpmTasks('grunt-react');
 
   grunt.registerTask('debug', function () {
     grunt.task.run([
@@ -309,6 +321,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('build', [
+    'react',
     'clean:dist',
     'chromeManifest:dist',
     'useminPrepare',
