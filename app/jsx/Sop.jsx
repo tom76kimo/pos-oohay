@@ -4,10 +4,10 @@
 var SopItem = React.createClass({
     render: function () {
         return (
-            <li class="sop-item">
-                <img src="http://placekitten.com/g/135/135" alt="" />
-                <h1>卸甲歸鄉</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <li className="sop-item">
+                <img src="http://placekitten.com/g/140/140" alt="" />
+                <h1 className="sop-title">卸甲歸鄉</h1>
+                <p className="sop-desc">Lorem ipsum dolor sit amet, consectetur</p>
             </li>
         );
     }
