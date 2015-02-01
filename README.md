@@ -4,7 +4,11 @@
 ```grunt debug```
 
 # Build
-```grunt build```
+```
+npm install
+bower install
+grunt build
+```
 
 # Install
 
