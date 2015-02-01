@@ -65,6 +65,12 @@ var SopItem = React.createClass({
     }
 });
 
+var SopBanner = React.createClass({
+    render: function () {
+        return <div className="sop-banner">Yahoo! SOP</div>;
+    }
+});
+
 var Sop = React.createClass({
     getInitialState: function() {
         return mockState;
@@ -86,6 +92,7 @@ var Sop = React.createClass({
 
         return (
             <div className="sop-viewport">
+                <SopBanner />
                 <div className="sop-container">
                     {sopItems}
                 </div>
