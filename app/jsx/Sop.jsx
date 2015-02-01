@@ -79,11 +79,9 @@ var Sop = React.createClass({
 
             if (matchKeywords.length === 0) {
                 return null;
+            } else {
+                return (<SopItem key={index} {...item} />);
             }
-
-            return (
-                <SopItem key={index} {...item} />
-            );
         }, this);
 
         return (
@@ -97,6 +95,6 @@ var Sop = React.createClass({
 });
 
 React.render(
-    <Sop searchTerm="b" />,
+    <Sop searchTerm={document.getElementById('yschsp').value} />,
     document.querySelector('#sop-block')
 );
