@@ -8,40 +8,45 @@ var mockState = {
                 src: 'http://placekitten.com/g/140/140',
                 alt: ''
             },
-            title: '卸甲歸鄉',
-            desc: 'Lorem ipsum dolor sit amet, consectetur'
+            title: '卸甲歸鄉ABC',
+            desc: 'Lorem ipsum dolor sit amet, consectetur',
+            keywords: ['aaa', 'bbb', 'ccc']
         },
         {
             image: {
                 src: 'http://placekitten.com/g/140/140',
                 alt: ''
             },
-            title: '卸甲歸鄉',
-            desc: 'Lorem ipsum dolor sit amet, consectetur'
+            title: '卸甲歸鄉AB',
+            desc: 'Lorem ipsum dolor sit amet, consectetur',
+            keywords: ['aaa', 'bbb']
         },
         {
             image: {
                 src: 'http://placekitten.com/g/140/140',
                 alt: ''
             },
-            title: '卸甲歸鄉',
-            desc: 'Lorem ipsum dolor sit amet, consectetur'
+            title: '卸甲歸鄉A',
+            desc: 'Lorem ipsum dolor sit amet, consectetur',
+            keywords: ['aaa']
         },
         {
             image: {
                 src: 'http://placekitten.com/g/140/140',
                 alt: ''
             },
-            title: '卸甲歸鄉',
-            desc: 'Lorem ipsum dolor sit amet, consectetur'
+            title: '卸甲歸鄉B',
+            desc: 'Lorem ipsum dolor sit amet, consectetur',
+            keywords: ['bbb']
         },
         {
             image: {
                 src: 'http://placekitten.com/g/140/140',
                 alt: ''
             },
-            title: '卸甲歸鄉',
-            desc: 'Lorem ipsum dolor sit amet, consectetur'
+            title: '卸甲歸鄉C',
+            desc: 'Lorem ipsum dolor sit amet, consectetur',
+            keywords: ['ccc']
         }
     ]
 };
