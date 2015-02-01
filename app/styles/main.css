@@ -3,6 +3,7 @@
     overflow: hidden;
     padding: 10px 20px 27px 10px;
     width: 100%;
+    background-color: #ffedff;
 }
 
 .sop-container {
@@ -31,4 +32,10 @@
     white-space: normal;
     width: 100%;
     color: darkgray;
+}
+
+.sop-banner {
+    color: #6e329d;
+    font-size: 25px;
+    height: 30px;
 }
