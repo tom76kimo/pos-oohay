@@ -70,7 +70,17 @@ var Sop = React.createClass({
         return mockState;
     },
     render: function () {
+        var pattern = new RegExp(this.props.searchTerm);
         var sopItems = this.state.items.map(function (item, index) {
+            item.keywords = item.keywords || [];
+            var matchKeywords = item.keywords.filter(function (keyword) {
+                return pattern.test(keyword);
+            });
+
+            if (matchKeywords.length === 0) {
+                return null;
+            }
+
             return (
                 <SopItem key={index} {...item} />
             );
@@ -87,6 +97,6 @@ var Sop = React.createClass({
 });
 
 React.render(
-    <Sop />,
+    <Sop searchTerm="b" />,
     document.querySelector('#sop-block')
 );
