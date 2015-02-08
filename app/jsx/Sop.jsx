@@ -10,7 +10,10 @@ var mockState = {
             },
             title: '卸甲歸鄉ABC',
             desc: 'Lorem ipsum dolor sit amet, consectetur',
-            keywords: ['aaa', 'bbb', 'ccc']
+            keywords: ['aaa', 'bbb', 'ccc'],
+            watch: 930,
+            favorite: 26,
+            lastUpdate: '01/25/2015'
         },
         {
             image: {
@@ -19,7 +22,10 @@ var mockState = {
             },
             title: '卸甲歸鄉AB',
             desc: 'Lorem ipsum dolor sit amet, consectetur',
-            keywords: ['aaa', 'bbb']
+            keywords: ['aaa', 'bbb'],
+            watch: 930,
+            favorite: 26,
+            lastUpdate: '01/25/2015'
         },
         {
             image: {
@@ -28,7 +34,10 @@ var mockState = {
             },
             title: '卸甲歸鄉A',
             desc: 'Lorem ipsum dolor sit amet, consectetur',
-            keywords: ['aaa']
+            keywords: ['aaa'],
+            watch: 930,
+            favorite: 26,
+            lastUpdate: '01/25/2015'
         },
         {
             image: {
@@ -37,7 +46,10 @@ var mockState = {
             },
             title: '卸甲歸鄉B',
             desc: 'Lorem ipsum dolor sit amet, consectetur',
-            keywords: ['bbb']
+            keywords: ['bbb'],
+            watch: 930,
+            favorite: 26,
+            lastUpdate: '01/25/2015'
         },
         {
             image: {
@@ -46,7 +58,10 @@ var mockState = {
             },
             title: '卸甲歸鄉C',
             desc: 'Lorem ipsum dolor sit amet, consectetur',
-            keywords: ['ccc']
+            keywords: ['ccc'],
+            watch: 930,
+            favorite: 26,
+            lastUpdate: '01/25/2015'
         }
     ]
 };
@@ -59,6 +74,7 @@ var SopItem = React.createClass({
                     <img {...this.props.image} />
                     <h1 className="sop-title">{this.props.title}</h1>
                     <p className="sop-desc">{this.props.desc}</p>
+                    <span>最後更新: {this.props.lastUpdate}</span>
                 </li>
             </a>
         );
