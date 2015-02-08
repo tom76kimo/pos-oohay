@@ -69,21 +69,29 @@ var mockState = {
 var SopItem = React.createClass({
     render: function () {
         return (
-            <a href="#">
-                <li className="sop-item">
+            <li className="sop-item">
+                <a href="#">
                     <img {...this.props.image} />
                     <h1 className="sop-title">{this.props.title}</h1>
-                    <p className="sop-desc">{this.props.desc}</p>
-                    <span><i className="fa fa-eye"></i> 最後更新: {this.props.lastUpdate}</span>
-                </li>
-            </a>
+                </a>
+                <ul className="sop-info">
+                    <li><i className="fa fa-eye"></i> {this.props.watch}</li>
+                    <li><i className="fa fa-heart"></i> {this.props.favorite}</li>
+                </ul>
+                <span className="sop-update">最後更新: {this.props.lastUpdate}</span>
+            </li>
         );
     }
 });
 
 var SopBanner = React.createClass({
     render: function () {
-        return <div className="sop-banner">Yahoo! SOP</div>;
+        return (
+            <div className="sop-banner">
+                <span className="logo">Yahoo! SOP</span>
+                <a className="more" href="#">更多SOP <i className="fa fa-chevron-right"></i></a>
+            </div>
+        );
     }
 });
 
