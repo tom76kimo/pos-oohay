@@ -241,6 +241,8 @@ module.exports = function (grunt) {
             'styles/{,*/}*.css',
             'styles/fonts/{,*/}*.*',
             '_locales/{,*/}*.json',
+            'bower_components/**/*.woff',
+            'bower_components/font-awesome/**/*.css'
           ]
         }]
       }

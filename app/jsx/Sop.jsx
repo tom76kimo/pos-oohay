@@ -74,7 +74,7 @@ var SopItem = React.createClass({
                     <img {...this.props.image} />
                     <h1 className="sop-title">{this.props.title}</h1>
                     <p className="sop-desc">{this.props.desc}</p>
-                    <span>最後更新: {this.props.lastUpdate}</span>
+                    <span><i className="fa fa-eye"></i> 最後更新: {this.props.lastUpdate}</span>
                 </li>
             </a>
         );
@@ -121,3 +121,10 @@ React.render(
     <Sop searchTerm={document.getElementById('yschsp').value} />,
     document.querySelector('#sop-block')
 );
+
+var fa = document.createElement('style');
+    fa.type = 'text/css';
+    fa.textContent = '@font-face { font-family: FontAwesome; src: url("'
+        + chrome.extension.getURL('bower_components/font-awesome/fonts/fontawesome-webfont.woff')
+        + '"); }';
+document.head.appendChild(fa);
