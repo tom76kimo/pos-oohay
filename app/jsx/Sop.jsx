@@ -10,7 +10,10 @@ var mockState = {
             },
             title: '卸甲歸鄉ABC',
             desc: 'Lorem ipsum dolor sit amet, consectetur',
-            keywords: ['aaa', 'bbb', 'ccc']
+            keywords: ['aaa', 'bbb', 'ccc'],
+            watch: 930,
+            favorite: 26,
+            lastUpdate: '01/25/2015'
         },
         {
             image: {
@@ -19,7 +22,10 @@ var mockState = {
             },
             title: '卸甲歸鄉AB',
             desc: 'Lorem ipsum dolor sit amet, consectetur',
-            keywords: ['aaa', 'bbb']
+            keywords: ['aaa', 'bbb'],
+            watch: 930,
+            favorite: 26,
+            lastUpdate: '01/25/2015'
         },
         {
             image: {
@@ -28,7 +34,10 @@ var mockState = {
             },
             title: '卸甲歸鄉A',
             desc: 'Lorem ipsum dolor sit amet, consectetur',
-            keywords: ['aaa']
+            keywords: ['aaa'],
+            watch: 930,
+            favorite: 26,
+            lastUpdate: '01/25/2015'
         },
         {
             image: {
@@ -37,7 +46,10 @@ var mockState = {
             },
             title: '卸甲歸鄉B',
             desc: 'Lorem ipsum dolor sit amet, consectetur',
-            keywords: ['bbb']
+            keywords: ['bbb'],
+            watch: 930,
+            favorite: 26,
+            lastUpdate: '01/25/2015'
         },
         {
             image: {
@@ -46,7 +58,10 @@ var mockState = {
             },
             title: '卸甲歸鄉C',
             desc: 'Lorem ipsum dolor sit amet, consectetur',
-            keywords: ['ccc']
+            keywords: ['ccc'],
+            watch: 930,
+            favorite: 26,
+            lastUpdate: '01/25/2015'
         }
     ]
 };
@@ -54,20 +69,29 @@ var mockState = {
 var SopItem = React.createClass({
     render: function () {
         return (
-            <a href="#">
-                <li className="sop-item">
+            <li className="sop-item">
+                <a href="#">
                     <img {...this.props.image} />
                     <h1 className="sop-title">{this.props.title}</h1>
-                    <p className="sop-desc">{this.props.desc}</p>
-                </li>
-            </a>
+                </a>
+                <ul className="sop-info">
+                    <li><i className="fa fa-eye"></i> {this.props.watch}</li>
+                    <li><i className="fa fa-heart"></i> {this.props.favorite}</li>
+                </ul>
+                <span className="sop-update">最後更新: {this.props.lastUpdate}</span>
+            </li>
         );
     }
 });
 
 var SopBanner = React.createClass({
     render: function () {
-        return <div className="sop-banner">Yahoo! SOP</div>;
+        return (
+            <div className="sop-banner">
+                <span className="logo">Yahoo! SOP</span>
+                <a className="more" href="#">更多SOP <i className="fa fa-chevron-right"></i></a>
+            </div>
+        );
     }
 });
 
@@ -105,3 +129,10 @@ React.render(
     <Sop searchTerm={document.getElementById('yschsp').value} />,
     document.querySelector('#sop-block')
 );
+
+var fa = document.createElement('style');
+    fa.type = 'text/css';
+    fa.textContent = '@font-face { font-family: FontAwesome; src: url("'
+        + chrome.extension.getURL('bower_components/font-awesome/fonts/fontawesome-webfont.woff')
+        + '"); }';
+document.head.appendChild(fa);

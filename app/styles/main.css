@@ -3,7 +3,11 @@
     overflow: hidden;
     padding: 10px 20px 27px 10px;
     width: 100%;
-    background-color: #ffedff;
+    color: darkgray;
+}
+
+.sop-viewport a, .sop-viewport a:visited {
+    color: inherit !important;
 }
 
 .sop-container {
@@ -11,6 +15,29 @@
     margin: 0;
     padding: 0;
     white-space: nowrap;
+}
+
+.sop-banner .logo {
+    float: left;
+    color: #400090;
+    font-size: 1.6em;
+}
+
+.sop-banner .more {
+    float: right;
+    line-height: 2em;
+}
+
+.sop-banner {
+    margin-bottom: 6px;
+    height: 24px;
+}
+
+.sop-banner:after {
+    content: '';
+    display: table-cell;
+    clear: both;
+    overflow: auto;
 }
 
 .sop-item {
@@ -23,19 +50,18 @@
 }
 
 .sop-title {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: bold;
+    margin-bottom: 4px;
 }
 
-.sop-desc {
-    font-size: 0.8rem;
-    white-space: normal;
+.sop-info {
     width: 100%;
-    color: darkgray;
+    padding: 0;
+    margin: 0;
 }
 
-.sop-banner {
-    color: #6e329d;
-    font-size: 25px;
-    height: 30px;
+.sop-info li {
+    display: inline-block;
+    margin-right: 1em;
 }
