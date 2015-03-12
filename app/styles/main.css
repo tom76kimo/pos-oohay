@@ -3,7 +3,14 @@
     overflow: hidden;
     padding: 10px 10px 27px 13px;
     width: 100%;
-    color: darkgray;
+    background-color: #ddd;
+
+    -webkit-transition: background-color 500ms linear;
+    -moz-transition: background-color 500ms linear;
+    -o-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+
 }
 
 .sop-viewport a, .sop-viewport a:visited {

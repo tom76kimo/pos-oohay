@@ -1,6 +1,6 @@
 {
     "name": "__MSG_appName__",
-    "version": "0.0.152",
+    "version": "0.0.168",
     "manifest_version": 2,
     "description": "__MSG_appDescription__",
     "icons": {
@@ -33,6 +33,9 @@
         }
     ],
     "web_accessible_resources": [
-        "bower_components/font-awesome/fonts/fontawesome-webfont.woff"
+        "bower_components/font-awesome/fonts/fontawesome-webfont.woff",
+        "images/d16449.jpg",
+        "images/2.jpg",
+        "images/3.jpg"
     ]
 }

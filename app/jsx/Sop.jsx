@@ -5,7 +5,7 @@ var mockState = {
     items: [
         {
             image: {
-                src: 'http://static.ettoday.net/images/16/d16449.jpg',
+                src: chrome.extension.getURL('images/d16449.jpg'),
                 alt: ''
             },
             title: 'Car Accident',
@@ -17,7 +17,7 @@ var mockState = {
         },
         {
             image: {
-                src: 'https://giveitaburl.files.wordpress.com/2013/10/green-car-break-down.jpg',
+                src: chrome.extension.getURL('images/2.jpg'),
                 alt: ''
             },
             title: 'Car Broken',
@@ -29,7 +29,7 @@ var mockState = {
         },
         {
             image: {
-                src: 'http://image.16888.com/upload/Images/2013/05/2013050706141822938.jpg',
+                src: chrome.extension.getURL('images/3.jpg'),
                 alt: ''
             },
             title: 'Wax the Car',
@@ -91,13 +91,20 @@ var Sop = React.createClass({
         }, this);
 
         return (
-            <div className="dd sop-viewport">
+            <div ref="viewPort" className="dd sop-viewport">
                 <SopBanner />
                 <div className="sop-container">
                     {sopItems}
                 </div>
             </div>
         );
+    },
+    componentDidMount: function () {
+        var self = this;
+        setTimeout(function () {    
+            var viewPort = self.refs.viewPort.getDOMNode();
+            viewPort.style.backgroundColor = 'transparent';
+        }, 250);
     }
 });
 
