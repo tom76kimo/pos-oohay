@@ -5,63 +5,39 @@ var mockState = {
     items: [
         {
             image: {
-                src: 'http://placekitten.com/g/140/140',
+                src: 'http://static.ettoday.net/images/16/d16449.jpg',
                 alt: ''
             },
-            title: '卸甲歸鄉ABC',
+            title: 'Car Accident',
             desc: 'Lorem ipsum dolor sit amet, consectetur',
-            keywords: ['aaa', 'bbb', 'ccc'],
-            watch: 930,
-            favorite: 26,
-            lastUpdate: '01/25/2015'
+            keywords: ['car accident'],
+            watch: 2563,
+            favorite: 1726,
+            lastUpdate: 'Jan. 25, 2015'
         },
         {
             image: {
-                src: 'http://placekitten.com/g/140/140',
+                src: 'https://giveitaburl.files.wordpress.com/2013/10/green-car-break-down.jpg',
                 alt: ''
             },
-            title: '卸甲歸鄉AB',
+            title: 'Car Broken',
             desc: 'Lorem ipsum dolor sit amet, consectetur',
-            keywords: ['aaa', 'bbb'],
-            watch: 930,
-            favorite: 26,
-            lastUpdate: '01/25/2015'
+            keywords: ['car accident'],
+            watch: 928,
+            favorite: 753,
+            lastUpdate: 'Feb. 17, 2015'
         },
         {
             image: {
-                src: 'http://placekitten.com/g/140/140',
+                src: 'http://image.16888.com/upload/Images/2013/05/2013050706141822938.jpg',
                 alt: ''
             },
-            title: '卸甲歸鄉A',
+            title: 'Wax the Car',
             desc: 'Lorem ipsum dolor sit amet, consectetur',
-            keywords: ['aaa'],
-            watch: 930,
-            favorite: 26,
-            lastUpdate: '01/25/2015'
-        },
-        {
-            image: {
-                src: 'http://placekitten.com/g/140/140',
-                alt: ''
-            },
-            title: '卸甲歸鄉B',
-            desc: 'Lorem ipsum dolor sit amet, consectetur',
-            keywords: ['bbb'],
-            watch: 930,
-            favorite: 26,
-            lastUpdate: '01/25/2015'
-        },
-        {
-            image: {
-                src: 'http://placekitten.com/g/140/140',
-                alt: ''
-            },
-            title: '卸甲歸鄉C',
-            desc: 'Lorem ipsum dolor sit amet, consectetur',
-            keywords: ['ccc'],
-            watch: 930,
-            favorite: 26,
-            lastUpdate: '01/25/2015'
+            keywords: ['car accident'],
+            watch: 1026,
+            favorite: 824,
+            lastUpdate: 'Mar. 04, 2015'
         }
     ]
 };
@@ -71,14 +47,14 @@ var SopItem = React.createClass({
         return (
             <li className="sop-item">
                 <a href="#">
-                    <img {...this.props.image} />
+                    <img className="sop-image" {...this.props.image} />
                     <h1 className="sop-title">{this.props.title}</h1>
                 </a>
                 <ul className="sop-info">
                     <li><i className="fa fa-eye"></i> {this.props.watch}</li>
                     <li><i className="fa fa-heart"></i> {this.props.favorite}</li>
                 </ul>
-                <span className="sop-update">最後更新: {this.props.lastUpdate}</span>
+                <div className="sop-update">{this.props.lastUpdate}</div>
             </li>
         );
     }
@@ -89,7 +65,7 @@ var SopBanner = React.createClass({
         return (
             <div className="sop-banner">
                 <span className="logo">Yahoo! SOP</span>
-                <a className="more" href="#">更多SOP <i className="fa fa-chevron-right"></i></a>
+                <a className="more" href="#">more SOPs <i className="fa fa-chevron-right"></i></a>
             </div>
         );
     }
@@ -115,7 +91,7 @@ var Sop = React.createClass({
         }, this);
 
         return (
-            <div className="sop-viewport">
+            <div className="dd sop-viewport">
                 <SopBanner />
                 <div className="sop-container">
                     {sopItems}
@@ -126,7 +102,7 @@ var Sop = React.createClass({
 });
 
 React.render(
-    <Sop searchTerm={document.getElementById('yschsp').value} />,
+    <Sop searchTerm={document.querySelector('#yschsp') ? document.getElementById('yschsp').value : document.getElementById('p').value} />,
     document.querySelector('#sop-block')
 );
 

@@ -1,6 +1,6 @@
 {
     "name": "__MSG_appName__",
-    "version": "0.0.110",
+    "version": "0.0.152",
     "manifest_version": 2,
     "description": "__MSG_appDescription__",
     "icons": {
@@ -17,7 +17,7 @@
     "content_scripts": [
         {
             "matches": [
-                "https://tw.search.yahoo.com/*"
+                "https://search.yahoo.com/*"
             ],
             "css": [
                 "bower_components/font-awesome/css/font-awesome.css",
