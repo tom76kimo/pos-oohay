@@ -44,10 +44,13 @@ var mockState = {
 
 var SopItem = React.createClass({
     render: function () {
+        var style = {
+            backgroundImage: 'url(' + this.props.image.src + ')'
+        };
         return (
             <li className="sop-item">
                 <a href="#">
-                    <img className="sop-image" {...this.props.image} />
+                    <a className="sop-image" style={style} />
                     <h1 className="sop-title">{this.props.title}</h1>
                 </a>
                 <ul className="sop-info">
@@ -65,7 +68,7 @@ var SopBanner = React.createClass({
         return (
             <div className="sop-banner">
                 <span className="logo">Yahoo! SOP</span>
-                <a className="more" href="#">more SOPs <i className="fa fa-chevron-right"></i></a>
+                <a className="more" href="#">more <i className="fa fa-chevron-right"></i></a>
             </div>
         );
     }
@@ -91,20 +94,13 @@ var Sop = React.createClass({
         }, this);
 
         return (
-            <div ref="viewPort" className="dd sop-viewport">
+            <div className="dd sop-viewport">
                 <SopBanner />
                 <div className="sop-container">
                     {sopItems}
                 </div>
             </div>
         );
-    },
-    componentDidMount: function () {
-        var self = this;
-        setTimeout(function () {    
-            var viewPort = self.refs.viewPort.getDOMNode();
-            viewPort.style.backgroundColor = 'transparent';
-        }, 250);
     }
 });
 

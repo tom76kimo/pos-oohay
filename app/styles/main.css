@@ -1,9 +1,8 @@
 .sop-viewport {
     box-sizing: border-box;
     overflow: hidden;
-    padding: 10px 10px 27px 13px;
+    padding: 10px 10px 20px 10px;
     width: 100%;
-    background-color: #ddd;
 
     -webkit-transition: background-color 500ms linear;
     -moz-transition: background-color 500ms linear;
@@ -18,6 +17,7 @@
 }
 
 .sop-container {
+    margin-top: 20px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -28,11 +28,13 @@
     float: left;
     color: #400090;
     font-size: 1.6em;
+    margin-top: 10px;
 }
 
 .sop-banner .more {
     float: right;
     line-height: 2em;
+    color: #7E7E7E;
 }
 
 .sop-banner {
@@ -50,29 +52,56 @@
 .sop-item {
     -webkit-line-clamp: 1;
     display: inline-block;
-    padding: 0;
-    margin: 0px 7px 0px 0px;
+    padding: 10px;
+    margin: 0;
     vertical-align: top;
-    width: 128px;
+    width: 33%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.sop-item:hover {
+    background-color: rgba(0, 0, 0, .1)
 }
 
 .sop-image {
-    width: 118px;
+    display: block;
+    padding-bottom: 65%;
+    width: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
 }
 
 .sop-title {
     font-size: 1.1rem;
     font-weight: bold;
     margin-bottom: 4px;
+    font-weight: 500;
+    color: #595959;
+    font-size: 19px;
+    margin-top: 8px;
 }
 
 .sop-info {
     width: 100%;
     padding: 0;
     margin: 0;
+    color: #5C5C5C;
+    margin-top: 14px;
+    font-size: 1px;
 }
 
 .sop-info li {
     display: inline-block;
     margin-right: 1em;
+}
+
+.sop-update {
+    color: #898989;
+    margin-top: 3px;
+    font-size: 1px;
+}
+
+#sop-block {
+    background-color: #F7F7F7;
 }
